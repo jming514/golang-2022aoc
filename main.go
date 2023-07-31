@@ -29,6 +29,18 @@ func main() {
 	// split every row into an element in a slice
 	result := strings.Split(string(body), "\n")
 
+}
+
+func dayThree() {
+	body, error := ioutil.ReadFile("day3.txt")
+
+	if error != nil {
+		fmt.Printf("Error reading file: %v", error)
+	}
+
+	// split every row into an element in a slice
+	result := strings.Split(string(body), "\n")
+
 	final := ""
 	// get shared characters from each row
 	for i := 0; i < len(result); i++ {
